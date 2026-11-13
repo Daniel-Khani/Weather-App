@@ -1,0 +1,450 @@
+/* =============================
+   Reset
+============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =============================
+   Body
+============================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #e8f1f8;
+
+    transition: background 0.4s ease;
+}
+
+
+/* =============================
+   Main App
+============================= */
+
+.weather-app {
+    width: 400px;
+    max-width: 90%;
+
+    margin: 30px 0;
+    
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+}
+
+
+/* =============================
+   Title
+============================= */
+
+h1 {
+    margin-bottom: 25px;
+}
+
+
+/* =============================
+   Search
+============================= */
+
+.search-box {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+
+.search-box input {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+.search-box input:focus {
+    border-color: #2196f3;
+}
+
+
+.search-box button {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2196f3;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: background 0.2s ease;
+}
+
+
+.search-box button:hover {
+    background: #1976d2;
+}
+
+
+.search-box button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =============================
+   Messages
+============================= */
+
+#loading-message {
+    color: #2196f3;
+
+    font-size: 14px;
+
+    margin-top: -20px;
+
+    margin-bottom: 15px;
+
+    min-height: 18px;
+}
+
+
+#error-message {
+    color: #e53935;
+
+    font-size: 14px;
+
+    margin-top: -20px;
+
+    margin-bottom: 15px;
+
+    min-height: 18px;
+}
+
+
+/* =============================
+   Hidden
+============================= */
+
+.hidden {
+    display: none;
+}
+
+
+/* =============================
+   Location
+============================= */
+
+.location {
+    margin-bottom: 15px;
+}
+
+
+.city-title {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.city-title h2 {
+    font-size: 28px;
+
+    margin: 0;
+}
+
+
+#country-flag {
+    width: 32px;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+#country-name {
+    margin-top: 5px;
+
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+/* =============================
+   Weather Card
+============================= */
+
+.weather-card {
+    padding: 20px;
+}
+
+
+#weather-icon {
+    font-size: 70px;
+
+    margin-bottom: 10px;
+}
+
+
+#temperature {
+    font-size: 48px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+#description {
+    font-size: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =============================
+   Weather Details
+============================= */
+
+.weather-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.weather-details p {
+    font-size: 15px;
+}
+
+
+/* =============================
+   Weather Backgrounds
+============================= */
+
+body.clear {
+    background: #ffe082;
+}
+
+
+body.cloudy {
+    background: #b0bec5;
+}
+
+
+body.fog {
+    background: #cfd8dc;
+}
+
+
+body.rain {
+    background: #90caf9;
+}
+
+
+body.snow {
+    background: #e3f2fd;
+}
+
+
+body.storm {
+    background: #78909c;
+}
+
+
+body.unknown {
+    background: #e8f1f8;
+}
+
+
+/* =============================
+   Forecast
+============================= */
+
+.forecast {
+    margin-top: 25px;
+}
+
+
+.forecast h2 {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+#forecast-container {
+    display: flex;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    padding-bottom: 5px;
+}
+
+
+/* =============================
+   Forecast Card
+============================= */
+
+.forecast-card {
+    min-width: 90px;
+
+    padding: 15px 10px;
+
+    background: #f5f7fa;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    border: 1px solid #e5e7eb;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.forecast-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =============================
+   Forecast Day
+============================= */
+
+.forecast-day {
+    font-weight: bold;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =============================
+   Forecast Icon
+============================= */
+
+.forecast-icon {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =============================
+   Forecast Temperature
+============================= */
+
+.forecast-temp {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 6px;
+}
+
+
+.max-temp {
+    font-weight: bold;
+
+    color: #222;
+}
+
+
+.min-temp {
+    color: #888;
+}
+
+
+/* =============================
+   Mobile
+============================= */
+
+@media (max-width: 500px) {
+
+    .weather-app {
+        padding: 20px;
+    }
+
+
+    h1 {
+        font-size: 28px;
+    }
+
+
+    .search-box {
+        flex-direction: column;
+    }
+
+
+    .search-box button {
+        width: 100%;
+    }
+
+
+    #temperature {
+        font-size: 42px;
+    }
+
+
+    #weather-icon {
+        font-size: 60px;
+    }
+
+
+    .city-title h2 {
+        font-size: 24px;
+    }
+
+
+    #country-flag {
+        width: 28px;
+    }
+
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="weather-app">
+
+        <!-- Title -->
+        <h1>Weather App</h1>
+
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="city-input"
+                placeholder="Enter city name..."
+                autocomplete="off"
+            >
+
+            <button id="search-btn">
+                Search
+            </button>
+
+        </div>
+
+
+        <!-- Messages -->
+        <p id="loading-message"></p>
+
+        <p id="error-message"></p>
+
+
+        <!-- Current Weather -->
+        <section class="weather-card hidden">
+
+            <!-- Location -->
+            <div class="location">
+
+                <div class="city-title">
+
+                    <img id="country-flag" alt="Country flag">
+
+                    <h2 id="city-name"></h2>
+
+                </div>
+
+                <p id="country-name"></p>
+
+            </div>
+
+
+            <!-- Weather Icon -->
+            <div id="weather-icon"></div>
+
+
+            <!-- Temperature -->
+            <p id="temperature"></p>
+
+
+            <!-- Description -->
+            <p id="description"></p>
+
+
+            <!-- Weather Details -->
+            <div class="weather-details">
+
+                <p>
+                    💧 Humidity:
+                    <span id="humidity"></span>
+                </p>
+
+                <p>
+                    💨 Wind:
+                    <span id="wind"></span>
+                </p>
+
+                <p>
+                    🌡️ Feels like:
+                    <span id="feels-like"></span>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 5 Day Forecast -->
+        <section class="forecast hidden">
+
+            <h2>5-Day Forecast</h2>
+
+            <div id="forecast-container"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
